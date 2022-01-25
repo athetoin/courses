@@ -4,6 +4,7 @@ var selector = document.getElementById("solutions")
 
 class Solution{
     id; title;
+    isPattern = false;
     answer(){return any;}
     get orderNumber(){
         var parts = this.id.split(".");
@@ -18,8 +19,9 @@ var allSolutions = [];
 
 window.onload = function() {
     var solutionNames = [
-    "1-1-three-messages",
-    "1-2-five-messages"
+    "1-01-three-messages",
+    "1-02-five-messages",
+    "1-03-pattern"
     ];
     scriptsForLoad = solutionNames.length;
     solutionNames.forEach(name => {
@@ -53,10 +55,19 @@ function executeSolution() {
         var title = document.getElementById("title");
         title.innerText = solution.label;
 
-        solution.answer().forEach(output => {
+        var answer = solution.answer();
+        if(!solution.isPattern){
+            answer.forEach(output=> {
                 var paragraph = document.createElement('p');
-                paragraph.innerText = output;
                 out.append(paragraph);
-            })
+                paragraph.innerText = output;
+            });
+        } else {
+            var paragraph = document.createElement('p');
+            out.append(paragraph);
+            var preformated = document.createElement('pre');
+            paragraph.append(preformated);
+            preformated.innerHTML = answer.join('<br>');
+        }
     }
 }
