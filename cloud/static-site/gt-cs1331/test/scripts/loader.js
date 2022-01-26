@@ -26,15 +26,15 @@ function onLoadedSource() {
   }
 }
 
-function loadTests(){
-	sources.slice(1).forEach((name) => {
-  scriptsForLoad++;
-  var newScript = document.createElement("script");
-  newScript.src = "scripts/" + name + ".spec.js";
-  newScript.async = true;
-  newScript.onload = onLoadedTest;
-  document.head.appendChild(newScript);
-});
+function loadTests() {
+  sources.slice(1).forEach((name) => {
+    scriptsForLoad++;
+    var newScript = document.createElement("script");
+    newScript.src = "scripts/" + name + ".spec.js";
+    newScript.async = true;
+    newScript.onload = onLoadedTest;
+    document.head.appendChild(newScript);
+  });
 }
 
 function onLoadedTest() {
