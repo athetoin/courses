@@ -10,6 +10,7 @@ window.onload = function () {
     "1-03-pattern",
     "1-04-table",
     "1-05-computator",
+    "1-06-summation-series"
   ];
   scriptsForLoad = solutionNames.length;
   solutionNames.forEach((name) => {
