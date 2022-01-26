@@ -21,7 +21,8 @@ window.onload = function() {
     var solutionNames = [
     "1-01-three-messages",
     "1-02-five-messages",
-    "1-03-pattern"
+    "1-03-pattern",
+    "1-04-table"
     ];
     scriptsForLoad = solutionNames.length;
     solutionNames.forEach(name => {
