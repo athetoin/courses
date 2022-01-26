@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<h1>HTML document</h1>
+<section>
+    <h2>Definition</h2>
+    <p><dfn>Internet</dfn> is a connected networks with published <strong>content</strong>.</p>
+    <p><dfn>HTML document</dfn> is a main text <strong>content</strong> unit in <strong>Internet</strong>.</p>
+    <p><dfn>HTML</dfn> stands <strong>Hypertext</strong> <strong>Markup</strong> Language.</p>
+    <p><dfn>Hypertext</dfn> defines <strong>links</strong> to external <strong>content</strong>.</p>
+    <p><dfn>Markup</dfn> defines semantic (meaning) <strong>structure</strong> of document <strong>content</strong>.</p>
+</section>
+<section>
+    <h2>HTML element</h2>
+    <p><strong>HTML</strong> has <dfn>elements</dfn> enclosing or wrap different parts of the
+        <strong>content</strong> for their semantic meaning definition.
+    </p>
+    <p><dfn>HTML element</dfn> has <strong>opening tag</strong>, <strong>closing tag</strong> and <strong>
+            content</strong>.</p>
+    <p><dfn>Nested element</dfn> can be defined in <strong>content</strong> of <strong>parent element</strong>.
+        <strong>Nested elements</strong> are fully enclosed in <strong> parent element</strong> <strong>
+            content</strong>.
+    </p>
+    <p> <dfn>Empty element</dfn> does not have <strong> content</strong>. <strong> Empty element</strong> has no
+        <strong>closing tag</strong> or <strong> nested element</strong>. Empty elements can be used for context
+        definition or embeding other documents.
+    </p>
+</section>
+<section>
+    <h2>HTML Element structure</h2>
+    <ol>
+        <li>
+            <dfn>Opening tag</dfn> consists <strong>element name</strong> wrapped in <strong>angle
+                brackets</strong> with optional <strong>attributes</strong>.
+            <ol>
+                <li><dfn>Element name</dfn> defines type of element. It is not case-sensitive.</li>
+                <li><dfn>Attribute</dfn> has an extra information (context) that is not in <strong>content</strong>. It
+                    has <strong>spaces</strong>, <strong>name</strong> and <strong>value</strong>
+                    <ul>
+                        <li> <dfn>Spaces</dfn> separate <strong>attribute</strong> from element <strong>name</strong>
+                            and other <strong>attributes</strong>
+                        </li>
+                        <li> <dfn>Name</dfn> identifies value in context of <strong>element</strong>. It is followed by
+                            separating <strong>equal sign</strong></li>
+                        <li> <dfn>Value</dfn> provides specific context to <strong>element</strong>. It is wrapped by
+                            <strong>quotation marks</strong> because <strong>value</strong> can have
+                            <strong>spaces</strong>.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+        <li> <dfn>Closing tag</dfn> has same <strong>name</strong> like in <strong>opening tag</strong> with
+            <strong>forward slash</strong> and no <strong>attributes</strong>
+        </li>
+    </ol>
+</section>
+<section>
+    <h1>HTML document structure</h1>
+    <strong>HTML document</strong> has predefined set of <strong>elements</strong>:
+    <ol>
+        <li><code>&lt;!DOCTYPE html&gt;</code> is preamble defying applied set of rules</li>
+        <li><code>&lt;html&gt;</code> is a root element that wraps entire document content. Using attribute "lang" is
+            encouraged so browser tools (like aids speech, translation and so forth) can determine right settings. This
+            element has two child elements
+            <ol>
+                <li><code>&lt;head&gt;</code> is a container for document metadata. It is elements describing document
+                    having no displayed content.</li>
+                <li><code>&lt;body&gt;</code> is a root container for document content.</li>
+            </ol>
+        </li>
+    </ol>
+</section>
+<section>
+    <h1>Document metadata</h1>
+    <ul>
+        <li><code> &lt;meta charset="utf-8"&gt;</code> is element defying charset for text content</li>
+        <li><code> &lt;title&gt;</code> - element defying entire document label. It can be different from first heading
+            that does not have to stand alone taken out of context.</li>
+    </ul>
+</section>
+<section>
+    <h1>Sections</h1>
+    <section>
+        <h1>Article</h1>
+        <code>&lt;article&gt;</code> is an independent item of content (like newspaper article, blog entry, user
+        submitted comment or any other.
+        Every document is article by itself, but element is used if document has more than one self-contained items.
+        Articles can be re-arranged if needed
+        without loosing content meaning. Each article can have own header and footer.
+    </section>
+    <section>
+        <h1>Section</h1>
+        <code> &lt;section&gt;</code> is thematical grouping of content having own heading. In compare with
+        <code>&lt;article&gt;</code> it is not independent, and order of sections are more determined.
+    </section>
+    <section>
+        <h1>Headings</h1>
+        Section heading can be structured in 6 heading levels with elements from <code>&lt;h1&gt;</code> to
+        <code>&lt;h6&gt;</code>. It is assumed that <code>&lt;h1&gt;</code> element enclosing main title for section.
+    </section>
+</section>
+<section>
+    <h1>Grouping content</h1>
+    <p>Paragraphs Element <code>&lt;p&gt;</code> used for marking up paragraphs of text. Also, it can be used like more
+        general thematic grouping.</p>
+    <p> Lists Each line in list marked by element <code>&lt;li&gt;</code>. Line items
+        supposed to be grouped in one of two list type elements</p>
+    <p> Unordered list use parent element
+        <code>&lt;ul&gt;</code>
+    </p>
+    <p>Ordered list is grouped by parent element <code>&lt;ol&gt;</code></p>
+</section>
+<section>
+    <h1> Text-level semantics</h1> Elements on intra-paragraph level mark ups. Historically,
+    text-level elements used for content representation definition (like using italic font and etc.) With introducing
+    CSS, these elements supposed to be used for semantical definitions only, since Style sheet can change default
+    appearance of any element. The following are some examples.<ul>
+        <li><code>&lt;em&gt;</code> element for content stress emphasis</li>
+        <li><code>&lt;strong&gt;</code> element for showing words' importance</li>
+        <li> <code>&lt;q&gt;</code> element for marking quotations.</li>
+        <li> <code>&lt;i&gt;</code> element represents text in alternate voice or mood. Default
+            historical italic format can be changed with Style sheet.</li>
+        <li> <code>&lt;br&gt;</code> is a line break that is part of content, as in poems or addresses. It must not be
+            used for separating thematic groups in paragraph. Style sheet can change default "moving text to new
+            line" rendering on something else like "adding extra spacing" or inserting special symbols.</li>
+    </ul>
+</section>
+<section>
+    <h1> Links</h1>
+    <p>Using links creates network (web) of documents. Links can be used to augment current document or be a
+        hyperlink to another document that can be visited in browser.</p>
+    <p> Element <code>&lt;a&gt;</code> (anchor) defines hyperlink labeled by its contents. Content of this element
+        cannot be another anchor. Content cannot be interactive, so the only interaction defined by anchor is related to
+        new content navigation. Attribute "hypertext reference" (href) provides unified reference link (URL) of another
+        content.</p>
+</section>
+<section>
+    <h1> Embedded content</h1>
+    <p> These elements can embed different type of media (image, video, audio or any special) files into content of HTML
+        document.</p>
+    <p> For example, element <code>&lt;img&gt;</code> embeds images into page. Element position defines image place in
+        text content.
+        This element has two main attributes:
+    <ul>
+        <li> source (<code>src</code>) defines path to image file</li>
+        <li> alternative (<code>alt</code>) Provides text substitute for image. It can be used for visual impairment
+            screen reader and displayed in case of problem with image file loading.</li>
+    </ul>
+    </p>
+</section>
