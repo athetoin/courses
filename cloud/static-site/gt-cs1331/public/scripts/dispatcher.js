@@ -11,7 +11,8 @@ window.onload = function () {
     "1-04-table",
     "1-05-computator",
     "1-06-summation-series",
-    "1-07-approximate-pi"
+    "1-07-approximate-pi",
+    "1-08-circle-measure"
   ];
   scriptsForLoad = solutionNames.length;
   solutionNames.forEach((name) => {
