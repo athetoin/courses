@@ -5,8 +5,7 @@ class Solution108 extends Solution {
     var rds = 5.5;
     var prmr = 2 * rds * Math.PI;
     var area = rds * rds * Math.PI;
-    return [`perimeter = ${prmr.toFixed(6)}`,
-    `area = ${area.toFixed(6)}`];
+    return [`perimeter = ${prmr.toFixed(6)}`, `area = ${area.toFixed(6)}`];
   }
 }
 
