@@ -8,7 +8,8 @@ var sources = [
   "1-03-pattern",
   "1-04-table",
   "1-05-computator",
-  "1-06-summation-series"
+  "1-06-summation-series",
+  "1-07-approximate-pi"
 ];
 
 sources.forEach((name) => {
