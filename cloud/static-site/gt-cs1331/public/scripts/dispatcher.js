@@ -14,7 +14,8 @@ window.onload = function () {
     "1-07-approximate-pi",
     "1-08-circle-measure",
     "1-09-rectangle-measure",
-    "1-10-average-speed"
+    "1-10-average-speed",
+    "1-11-projection"
   ];
   scriptsForLoad = solutionNames.length;
   solutionNames.forEach((name) => {
