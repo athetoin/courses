@@ -16,7 +16,8 @@ window.onload = function () {
     "1-09-rectangle-measure",
     "1-10-average-speed",
     "1-11-projection",
-    "1-12-speed-calc"
+    "1-12-speed-calc",
+    "1-13-algebra"
   ];
   scriptsForLoad = solutionNames.length;
   solutionNames.forEach((name) => {
