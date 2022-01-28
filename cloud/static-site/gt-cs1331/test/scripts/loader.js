@@ -13,7 +13,8 @@ var sources = [
   "1-08-circle-measure",
   "1-09-rectangle-measure",
   "1-10-average-speed",
-  "1-11-projection"
+  "1-11-projection",
+  "1-12-speed-calc"
 ];
 
 sources.forEach((name) => {
