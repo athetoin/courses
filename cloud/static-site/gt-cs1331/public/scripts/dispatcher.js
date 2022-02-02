@@ -35,12 +35,9 @@ window.onload = function () {
 function onLoadedScript() {
   scriptsForLoad--;
   if (scriptsForLoad == 0) {
-    solutionNames
-      .filter((name) => name[1] != "")
-      .forEach((name) => {
-        allSolutions.push(eval("new " + name[1]));
-      });
-
+    solutionNames.slice(1).forEach((name) => {
+      allSolutions.push(eval("new " + name[1]));
+    });
     allSolutions.sort((a, b) => a.orderNumber - b.orderNumber);
     allSolutions.forEach((solution) => {
       const newOption = document.createElement("option");
