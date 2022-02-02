@@ -1,28 +1,31 @@
-var scriptsForLoad = 0;
-document.getElementById("run").onclick = executeSolution;
-var selector = document.getElementById("solutions");
+let scriptsForLoad = 0;
+const rerun = document.getElementById("run");
+rerun.onclick = executeSolution;
+const selector = document.getElementById("solutions");
+selector.onchange = executeSolution;
+const solutionNames = [
+  ["solution", ""],
+  ["1-01-three-messages", "Solution101"],
+  ["1-02-five-messages", "Solution102"],
+  ["1-03-pattern", "Solution103"],
+  ["1-04-table", "Solution104"],
+  ["1-05-computator", "Solution105"],
+  ["1-06-summation-series", "Solution106"],
+  ["1-07-approximate-pi", "Solution107"],
+  ["1-08-circle-measure", "Solution108"],
+  ["1-09-rectangle-measure", "Solution109"],
+  ["1-10-average-speed", "Solution110"],
+  ["1-11-projection", "Solution111"],
+  ["1-12-speed-calc", "Solution112"],
+  ["1-13-algebra", "Solution113"],
+];
+const allSolutions = [];
 
 window.onload = function () {
-  var solutionNames = [
-    "solution",
-    "1-01-three-messages",
-    "1-02-five-messages",
-    "1-03-pattern",
-    "1-04-table",
-    "1-05-computator",
-    "1-06-summation-series",
-    "1-07-approximate-pi",
-    "1-08-circle-measure",
-    "1-09-rectangle-measure",
-    "1-10-average-speed",
-    "1-11-projection",
-    "1-12-speed-calc",
-    "1-13-algebra"
-  ];
   scriptsForLoad = solutionNames.length;
   solutionNames.forEach((name) => {
-    var newScript = document.createElement("script");
-    newScript.src = "scripts/" + name + ".js";
+    const newScript = document.createElement("script");
+    newScript.src = "scripts/" + name[0] + ".js";
     newScript.async = true;
     newScript.onload = onLoadedScript;
     document.head.appendChild(newScript);
@@ -32,9 +35,15 @@ window.onload = function () {
 function onLoadedScript() {
   scriptsForLoad--;
   if (scriptsForLoad == 0) {
+    solutionNames
+      .filter((name) => name[1] != "")
+      .forEach((name) => {
+        allSolutions.push(eval("new " + name[1]));
+      });
+
     allSolutions.sort((a, b) => a.orderNumber - b.orderNumber);
     allSolutions.forEach((solution) => {
-      var newOption = document.createElement("option");
+      const newOption = document.createElement("option");
       newOption.value = solution.id;
       newOption.innerText = solution.label;
       selector.append(newOption);
@@ -44,24 +53,26 @@ function onLoadedScript() {
 
 function executeSolution() {
   if (selector.value != "") {
-    var out = document.getElementById("out");
+    const out = document.getElementById("out");
     out.querySelectorAll("p").forEach((p) => out.removeChild(p));
 
-    var solution = allSolutions.filter((item) => item.id == selector.value)[0];
-    var title = document.getElementById("title");
+    const solution = allSolutions.filter(
+      (item) => item.id == selector.value
+    )[0];
+    const title = document.getElementById("title");
     title.innerText = solution.label;
 
-    var answer = solution.answer();
+    const answer = solution.answer();
     if (!solution.isPattern) {
       answer.forEach((output) => {
-        var paragraph = document.createElement("p");
-        out.append(paragraph);
-        paragraph.innerText = output;
+        const paragraph0 = document.createElement("p");
+        out.append(paragraph0);
+        paragraph0.innerText = output;
       });
     } else {
-      var paragraph = document.createElement("p");
+      const paragraph = document.createElement("p");
       out.append(paragraph);
-      var preformated = document.createElement("pre");
+      const preformated = document.createElement("pre");
       paragraph.append(preformated);
       preformated.innerHTML = answer.join("<br>");
     }

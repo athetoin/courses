@@ -6,5 +6,3 @@ class Solution110 extends Solution {
     return [`Average speed is ${+speed.toFixed(6)} km/h`];
   }
 }
-
-allSolutions.push(new Solution110());

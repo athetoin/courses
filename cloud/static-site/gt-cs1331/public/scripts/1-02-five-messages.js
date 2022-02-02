@@ -5,5 +5,3 @@ class Solution102 extends Solution {
     return Array(5).fill("Welcome to Java");
   }
 }
-
-allSolutions.push(new Solution102());

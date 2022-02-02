@@ -8,5 +8,3 @@ class Solution106 extends Solution {
     return ["1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = " + result];
   }
 }
-
-allSolutions.push(new Solution106());

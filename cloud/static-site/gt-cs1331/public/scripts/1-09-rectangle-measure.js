@@ -12,5 +12,3 @@ class Solution109 extends Solution {
     ];
   }
 }
-
-allSolutions.push(new Solution109());

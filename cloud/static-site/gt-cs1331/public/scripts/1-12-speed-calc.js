@@ -6,5 +6,3 @@ class Solution112 extends Solution {
     return [`${+result.toFixed(6)} kilometers per hour`];
   }
 }
-
-allSolutions.push(new Solution112());

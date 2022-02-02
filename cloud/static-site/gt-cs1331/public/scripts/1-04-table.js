@@ -13,5 +13,3 @@ class Solution104 extends Solution {
     );
   }
 }
-
-allSolutions.push(new Solution104());

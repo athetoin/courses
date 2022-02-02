@@ -9,5 +9,3 @@ class Solution101 extends Solution {
     ];
   }
 }
-
-allSolutions.push(new Solution101());

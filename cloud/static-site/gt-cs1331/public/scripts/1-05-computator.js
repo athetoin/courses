@@ -5,5 +5,3 @@ class Solution105 extends Solution {
     return [((9.5 * 4.5 - 2.5 * 3) / (45.5 - 3.5)).toFixed(6)];
   }
 }
-
-allSolutions.push(new Solution105());

@@ -11,5 +11,3 @@ class Solution107 extends Solution {
     ];
   }
 }
-
-allSolutions.push(new Solution107());

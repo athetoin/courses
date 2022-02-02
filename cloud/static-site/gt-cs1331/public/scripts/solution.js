@@ -1,5 +1,3 @@
-var allSolutions = [];
-
 class Solution {
   id;
   title;

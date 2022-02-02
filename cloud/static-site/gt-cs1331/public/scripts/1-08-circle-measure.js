@@ -8,5 +8,3 @@ class Solution108 extends Solution {
     return [`perimeter = ${prmr.toFixed(6)}`, `area = ${area.toFixed(6)}`];
   }
 }
-
-allSolutions.push(new Solution108());

@@ -13,5 +13,3 @@ class Solution113 extends Solution {
     return [`x = ${+(x).toFixed(6)}`, `y = ${+y.toFixed(6)}`];
   }
 }
-
-allSolutions.push(new Solution113());
