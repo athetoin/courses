@@ -6,7 +6,7 @@ class Solution104 extends Solution {
     return [["a", "a^2", "a^3"].join("\x09")].concat(
       Array.from(Array(4), (_, i) => {
         var first = i + 1;
-        var second = first + first;
+        var second = first * first;
         var third = first * second;
         return [first, second, third].join("\x09");
       })
