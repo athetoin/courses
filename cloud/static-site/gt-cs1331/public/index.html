@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <meta charset="utf-8" />
+<link rel="stylesheet" href="styles/style.css">
 <script src="scripts/dispatcher.js" defer></script>
-
 <body>
-  <label for="solutions">Choose a solution:</label>
-  <select id="solutions" name="solutions">
-    <option disabled selected value=""></option>
-  </select>
-  <button id="run" type="button">Run</button>
-  <section id="out">
+  <nav>
+    <label for="solutions">Choose a solution:</label>
+    <select id="solutions" name="solutions">
+      <option disabled selected value=""></option>
+    </select>
+    <button id="run" type="button">Run</button>
+  </nav>
+  <section>
     <h1 id="title"></h1>
+    <article id="out"></article>
   </section>
 </body>
