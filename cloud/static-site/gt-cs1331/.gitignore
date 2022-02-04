@@ -10,3 +10,6 @@ build
 
 #Ignore IDEA project-specific directory
 .idea
+
+# Ignore VS project-specific directory
+.vs
