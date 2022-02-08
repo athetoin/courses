@@ -1,1 +1,18 @@
+#  Ignore Node.js folder
 node_modules
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+
+#Ignore Eclipse project-specific directory and file
+.settings
+.project
+
+#Ignore IDEA project-specific directory
+.idea
+
+# Ignore VS project-specific directory
+.vs
