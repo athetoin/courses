@@ -10,7 +10,7 @@ class Solution {
     return parseInt(parts[0], 10) * 100 + parseInt(parts[1], 10);
   }
   get label() {
-    return this.id + ": " + this.title;
+    return `${this.id}: ${this.title}`;
   }
 }
 

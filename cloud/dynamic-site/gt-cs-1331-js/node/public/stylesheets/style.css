@@ -1,22 +1,19 @@
-nav,
-section {
-  display: flex;
-}
-
-nav {
-  justify-content: center;
-  column-gap: 0.5ch;
-}
-
-section {
-  flex-direction: column;
-  align-items: center;
-}
-
 body {
   margin: 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  column-gap: 0.5ch;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

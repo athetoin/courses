@@ -7,7 +7,7 @@ class Solution106 extends Solution {
     var result = [...Array(9).keys()]
       .map((num) => num + 1)
       .reduce((sum, current) => sum + current);
-    return ["1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = " + result];
+    return [`1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = ${result}`];
   }
 }
 
