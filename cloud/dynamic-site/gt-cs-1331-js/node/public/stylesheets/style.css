@@ -1,19 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+nav,
+section,
+header {
+  display: flex;
+}
+
+header {
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2em;
+}
+
 body {
   margin: 0;
   height: 100vh;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 nav {
-  display: flex;
   justify-content: center;
   column-gap: 0.5ch;
+  margin-top: auto;
+  align-items: baseline;
 }
 
 section {
-  display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: auto;
 }

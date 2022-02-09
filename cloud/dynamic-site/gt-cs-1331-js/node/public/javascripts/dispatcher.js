@@ -1,4 +1,5 @@
-document.getElementById("run").onclick = executeSolution;
+const rerun = document.getElementById("run");
+rerun.onclick = executeSolution;
 const selector = document.getElementById("solutions");
 selector.onchange = executeSolution;
 
@@ -21,6 +22,8 @@ function executeSolution() {
 
     const title = document.getElementById("title");
     title.innerText = selector.options[selector.selectedIndex].text;
+
+    rerun.hidden = false;
 
     getData("/solutions/" + selector.value, function (answer) {
       if (!answer.isPattern) {
