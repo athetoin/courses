@@ -7,12 +7,15 @@ node_modules
 # Ignore Gradle build output directory
 build
 
-#Ignore Eclipse project-specific directory and file
+# Ignore Eclipse project-specific directory and file
 .settings
 .project
 
-#Ignore IDEA project-specific directory
+# Ignore IDEA project-specific directory
 .idea
 
 # Ignore VS project-specific directory
 .vs
+
+# Ignore VS Code project-specific directory
+.vscode
