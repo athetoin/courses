@@ -7,6 +7,7 @@ var indexRouter = require('./routes/index');
 var solutionsRouter = require('./routes/solutions');
 
 var app = express();
+app.disable("x-powered-by");
 
 app.use(logger('dev'));
 app.use(express.json());
