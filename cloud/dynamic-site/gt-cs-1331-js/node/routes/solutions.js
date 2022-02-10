@@ -2,19 +2,20 @@ const express = require("express");
 const router = express.Router();
 const fs = require("fs");
 const vm = require("vm");
-const console =require("console")
-console.log("Hi")
-console.log(__dirname)
+const console = require("console");
+console.log("Hi");
+console.log(__dirname);
 const allSolutions = fs
   .readdirSync(__dirname + "/../solutions/")
   .map((name) => name.split(".")[0])
   .filter((name) => name !== "solution")
-  .map((name) => eval(`new (require("../solutions/${name}"))`) /*{
-    const code = fs.readFileSync(__dirname + "/../solutions/" + name + ".js", "utf-8");
-    const sandbox={require,console,__dirname}
-    const obj = vm.runInNewContext(code, sandbox);
-    return new obj();
-  }*/);
+  .map((name) =>
+    vm.runInNewContext(`new (require("../solutions/${name}"))`, {
+      require,
+      __filename,
+      __dirname,
+    })
+  );
 
 router.get("/", function (req, res, next) {
   res.send(
