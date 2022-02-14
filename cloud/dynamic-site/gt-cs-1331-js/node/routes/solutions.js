@@ -3,8 +3,7 @@ const router = express.Router();
 const fs = require("fs");
 const vm = require("vm");
 const console = require("console");
-console.log("Hi");
-console.log(__dirname);
+
 const allSolutions = fs
   .readdirSync(__dirname + "/../solutions/")
   .map((name) => name.split(".")[0])

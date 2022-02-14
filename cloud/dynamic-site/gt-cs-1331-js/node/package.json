@@ -4,13 +4,33 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "mocha --reporter spec"
+    "dev": "nodemon ./bin/www & npm run scss",
+    "test": "mocha --reporter spec",
+    "scss": "sass --watch scss/main.scss public/stylesheets/main.css",
+    "mkcss": "sass -I node_modules/foundation-sites/scss -I node_modules/motion-ui/src scss/app.scss --no-embed-source-map public/stylesheets/app.css",
+    "mkcss0": "npm run mkcss && npx postcss --no-map public/stylesheets/app.css -u autoprefixer -r",
+    "mkcss1": "node uncss > try.css && move /y try.css public/stylesheets/app.css"
   },
   "dependencies": {
-    "chai": "^4.3.6",
+    "clean-css": "^5.2.4",
     "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
     "express": "~4.16.1",
     "morgan": "~1.9.1"
-  }
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "browserslist": "^4.19.1",
+    "chai": "^4.3.6",
+    "debug": "^4.3.3",
+    "foundation-sites": "^6.7.4",
+    "postcss": "^8.4.6",
+    "postcss-cli": "^9.1.0",
+    "uncss": "^0.17.3"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie >= 9",
+    "android >= 4.4",
+    "ios >= 7"
+  ]
 }

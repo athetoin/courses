@@ -3,24 +3,45 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Solutions in Javascript for GT CS 1331 course (Chapter 1)">
+    <meta
+      name="description"
+      content="Solutions in Javascript for GT CS 1331 course (Chapter 1)"
+    />
     <title>GT CS 1331 Chapter 1 (JS)</title>
-    <link rel="stylesheet" href="stylesheets/style.css" />
-    <script src="javascripts/dispatcher.js" defer></script>
+    <link rel="stylesheet" href="stylesheets/app.css" />
   </head>
   <body>
     <nav>
       <label for="solutions">Choose a solution:</label>
       <select id="solutions" name="solutions">
-        <option disabled selected value=""></option>
+        <option selected value=""></option>
       </select>
     </nav>
     <section>
       <header>
         <h1 id="title"></h1>
-        <button id="run" type="button" hidden>Re-Run</button>
+        <button id="run" type="button">Re-Run</button>
       </header>
       <article id="out"></article>
     </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/what-input@5.2.10/dist/what-input.min.js"
+      integrity="sha256-ZLjSztVkz5q3lKFjN9AgL6qR7TGLE+qnTXnNNTWtMF4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js"
+      integrity="sha256-pa7Y74IZwgQptQJbclFpK4+EEVNtqL26yF1UMra4X6M="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script src="javascripts/dispatcher.js" defer></script>
   </body>
 </html>
