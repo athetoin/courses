@@ -10,6 +10,7 @@ build
 # Ignore Eclipse project-specific directory and file
 .settings
 .project
+.classpath
 
 # Ignore IDEA project-specific directory
 .idea
