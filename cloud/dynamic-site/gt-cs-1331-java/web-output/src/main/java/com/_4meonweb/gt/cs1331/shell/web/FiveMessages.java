@@ -1,17 +1,21 @@
 package com._4meonweb.gt.cs1331.shell.web;
 
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 /** Write a program that displays "Welcome to Java" five times.
  *
  * @author Maxim */
 public class FiveMessages extends AbstractSolution {
   /** Create FiveMessages. */
   public FiveMessages() {
-    super("1.2", "Five Messages", 102);
+    super("1.2", "Display five messages");
   }
 
   @Override
-  public String getAnswer() {
-    return String.format("%s%n", "Welcome to Java")
-        .repeat(5).trim();
+  public List<String> getAnswer() {
+    return IntStream.range(0, 5).mapToObj(i -> "Welcome to Java")
+        .collect(Collectors.toUnmodifiableList());
   }
 }

@@ -20,4 +20,14 @@ dependencies{
   implementation("org.jboss.weld.servlet:weld-servlet-core:4.0.3.Final")
 }
 
+tasks.classes {
+    doLast {
+        copy {
+            from("src/main/resources") {
+            include("META-INF/beans.xml") }
+            into("$buildDir/classes/java/main/")
+        }
+    }
+}
+
 description = "Static output"

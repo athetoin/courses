@@ -2,13 +2,20 @@ package com._4meonweb.gt.cs1331.shell.web;
 
 public abstract class AbstractSolution implements Solution {
   private String id;
-  private String label;
+  private String title;
   private int order;
+  private String label;
+  private boolean pattern;
 
-  AbstractSolution(String id, String label, int order) {
-    this.setId(id);
-    this.setLabel(label);
-    this.setOrder(order);
+  AbstractSolution(String id, String title) {
+    this.id = id;
+    this.title = title;
+  }
+
+  AbstractSolution(String id, String title, boolean isPattern) {
+    this.id = id;
+    this.title = title;
+    this.pattern = isPattern;
   }
 
   @Override
@@ -17,27 +24,30 @@ public abstract class AbstractSolution implements Solution {
   }
 
   @Override
-  public void setId(String id) {
-    this.id = id;
-  }
-
-  @Override
   public String getLabel() {
+    if (this.label == null) {
+      this.label = String.format("%s: %s", this.id, this.title);
+    }
     return label;
   }
 
   @Override
-  public void setLabel(String label) {
-    this.label = label;
+  public String getTitle() {
+    return this.title;
+  }
+
+  @Override
+  public boolean isPattern() {
+    return this.pattern;
   }
 
   @Override
   public int getOrder() {
-    return order;
-  }
-
-  @Override
-  public void setOrder(int order) {
-    this.order = order;
+    if (this.order == 0) {
+      var parts = this.id.split("\\.");
+      this.order = Integer.parseInt(parts[0], 10) * 100
+          + Integer.parseInt(parts[1], 10);
+    }
+    return this.order;
   }
 }
