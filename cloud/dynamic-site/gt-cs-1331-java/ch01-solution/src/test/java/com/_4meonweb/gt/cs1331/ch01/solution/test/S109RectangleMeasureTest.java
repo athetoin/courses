@@ -21,7 +21,7 @@ class S109RectangleMeasureTest {
 
   @BeforeEach
   void calculate() {
-    rslt = (new S109RectangleMeasure()).getAnswer()
+    rslt = new S109RectangleMeasure().getAnswer()
         .map(strg -> strg.split(" = ")[1])
         .toArray(String[]::new);
   }

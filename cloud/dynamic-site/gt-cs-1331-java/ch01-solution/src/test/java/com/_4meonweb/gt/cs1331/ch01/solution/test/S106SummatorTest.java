@@ -17,8 +17,7 @@ class S106SummatorTest {
 
   @Test
   void testAnswer() {
-    final var sum = new S106Summator();
-    final var rslt = sum.getAnswer().toArray(String[]::new)[0];
+    final var rslt = new S106Summator().getAnswer().toArray(String[]::new)[0];
     assertEquals("45", rslt.substring(rslt.length() - 2), "Sum");
   }
 }

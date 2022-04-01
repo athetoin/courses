@@ -21,8 +21,7 @@ class S108CircleMeasureTest {
 
   @BeforeEach
   void calculate() {
-    rslt = (new S108CircleMeasure())
-        .getAnswer()
+    rslt = new S108CircleMeasure().getAnswer()
         .map(strg -> strg.split(" = ")[1])
         .toArray(String[]::new);
   }

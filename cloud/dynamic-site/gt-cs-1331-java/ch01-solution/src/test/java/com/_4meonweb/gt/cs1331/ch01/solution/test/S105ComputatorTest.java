@@ -17,9 +17,8 @@ class S105ComputatorTest {
 
   @Test
   void testAnswer() {
-    assertEquals(0.839286,
-        Double.parseDouble(
-            new S105Computator().getAnswer().toArray(String[]::new)[0]),
+    assertEquals("0.839286",
+        new S105Computator().getAnswer().toArray(String[]::new)[0],
         "Result");
   }
 }

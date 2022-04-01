@@ -21,8 +21,7 @@ class S107ApproximatorTest {
 
   @BeforeEach
   void calculate() {
-    rslt = (new S107Approximator())
-        .getAnswer()
+    rslt = new S107Approximator().getAnswer()
         .map(strg -> strg.split(" = ")[1])
         .toArray(String[]::new);
   }
