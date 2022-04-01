@@ -14,7 +14,6 @@ gretty {
 dependencies{
     implementation(project(":ch01-solution"))
     implementation(project(":output-api"))
-		compileOnly("jakarta.ws.rs:jakarta.ws.rs-api:3.0.0")
 		implementation("org.glassfish.jersey.containers:jersey-container-servlet:3.0.4")
 		implementation("org.glassfish.jersey.inject:jersey-hk2:3.0.4")
   	implementation("org.glassfish.jersey.media:jersey-media-moxy:3.0.4")
