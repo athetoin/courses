@@ -38,7 +38,7 @@ public interface SolutionViews extends Solution {
   }
 
   interface SolutionAnswer {
-    @XmlElement
+    @XmlElement(name = "isPattern")
     boolean isPattern();
 
     @XmlElement

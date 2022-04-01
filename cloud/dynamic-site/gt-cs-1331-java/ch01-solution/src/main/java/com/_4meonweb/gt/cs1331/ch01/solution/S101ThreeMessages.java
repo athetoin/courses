@@ -9,9 +9,9 @@ import java.util.stream.Stream;
  * and Programming is fun.
  *
  * @author Maxim */
-public class ThreeMessages extends AbstractSolution {
+public class S101ThreeMessages extends AbstractSolution {
   /** Create ThreeMessages. */
-  public ThreeMessages() {
+  public S101ThreeMessages() {
     super("1.1", "Display three messages");
   }
 

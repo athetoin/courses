@@ -8,9 +8,9 @@ import java.util.stream.IntStream;
 /** Write a program that displays "Welcome to Java" five times.
  *
  * @author Maxim */
-public class FiveMessages extends AbstractSolution {
+public class S102FiveMessages extends AbstractSolution {
   /** Create FiveMessages. */
-  public FiveMessages() {
+  public S102FiveMessages() {
     super("1.2", "Display five messages");
   }
 
