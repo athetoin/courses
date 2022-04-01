@@ -17,7 +17,7 @@ public class S104Table extends AbstractSolution {
   public Stream<String> getAnswer() {
     return Stream.concat(
         Stream.of(String.join("\t", "a", "a^2", "a^3")),
-        IntStream.range(1, 5)
+        IntStream.rangeClosed(1, 4)
             .mapToObj(
                 i -> IntStream.of(i, (int) Math.pow(i, 2), (int) Math.pow(i, 3))
                     .mapToObj(Integer::toString)
