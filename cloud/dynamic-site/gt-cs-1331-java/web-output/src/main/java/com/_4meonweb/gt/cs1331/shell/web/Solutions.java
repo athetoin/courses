@@ -1,7 +1,8 @@
 package com._4meonweb.gt.cs1331.shell.web;
 
-import com._4meonweb.gt.cs1331.shell.web.Solution.SolutionAnswer;
-import com._4meonweb.gt.cs1331.shell.web.Solution.SolutionItem;
+import com._4meonweb.gt.cs1331.shell.api.Solution;
+import com._4meonweb.gt.cs1331.shell.api.Solution.SolutionAnswer;
+import com._4meonweb.gt.cs1331.shell.api.Solution.SolutionItem;
 import jakarta.enterprise.inject.Instance;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;

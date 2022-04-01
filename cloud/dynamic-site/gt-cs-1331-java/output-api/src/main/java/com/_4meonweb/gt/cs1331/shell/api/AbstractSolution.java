@@ -1,4 +1,4 @@
-package com._4meonweb.gt.cs1331.shell.web;
+package com._4meonweb.gt.cs1331.shell.api;
 
 public abstract class AbstractSolution implements Solution {
   private String id;
@@ -7,12 +7,12 @@ public abstract class AbstractSolution implements Solution {
   private String label;
   private boolean pattern;
 
-  AbstractSolution(String id, String title) {
+  protected AbstractSolution(String id, String title) {
     this.id = id;
     this.title = title;
   }
 
-  AbstractSolution(String id, String title, boolean isPattern) {
+  protected AbstractSolution(String id, String title, boolean isPattern) {
     this.id = id;
     this.title = title;
     this.pattern = isPattern;

@@ -1,5 +1,6 @@
-package com._4meonweb.gt.cs1331.shell.web;
+package com._4meonweb.gt.cs1331.ch01.solution;
 
+import com._4meonweb.gt.cs1331.shell.api.AbstractSolution;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;

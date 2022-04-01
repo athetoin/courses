@@ -1,4 +1,4 @@
-package com._4meonweb.gt.cs1331.shell.web;
+package com._4meonweb.gt.cs1331.shell.api;
 
 import jakarta.xml.bind.annotation.XmlElement;
 import java.util.List;
