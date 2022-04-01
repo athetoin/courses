@@ -1,8 +1,8 @@
 package com._4meonweb.gt.cs1331.shell.web;
 
 import com._4meonweb.gt.cs1331.shell.api.Solution;
-import com._4meonweb.gt.cs1331.shell.api.Solution.SolutionAnswer;
-import com._4meonweb.gt.cs1331.shell.api.Solution.SolutionItem;
+import com._4meonweb.gt.cs1331.shell.web.SolutionViews.SolutionAnswer;
+import com._4meonweb.gt.cs1331.shell.web.SolutionViews.SolutionItem;
 import jakarta.enterprise.inject.Instance;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
@@ -22,7 +22,8 @@ public class Solutions {
   @GET
   @Produces(MediaType.APPLICATION_JSON)
   public List<SolutionItem> getList() {
-    return dnmcSlns.stream().map(Solution::getItem)
+    return dnmcSlns.stream().map(SolutionViewer::new)
+        .map(SolutionViewer::getItem)
         .collect(Collectors.toList());
   }
 
@@ -31,6 +32,7 @@ public class Solutions {
   @Path("{id}")
   public SolutionAnswer getAnswer(@PathParam("id") String id) {
     return dnmcSlns.stream().filter(sltn -> sltn.getId().equals(id))
-        .map(Solution::outputAnswer).findAny().orElse(null);
+        .map(SolutionViewer::new).map(SolutionViewer::outputAnswer).findAny()
+        .orElse(null);
   }
 }
