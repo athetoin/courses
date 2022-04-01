@@ -1,6 +1,5 @@
 package com._4meonweb.gt.cs1331.shell.api;
 
-import java.util.List;
 import java.util.stream.Stream;
 
 /** Exercise solution for publication.
@@ -23,7 +22,7 @@ public interface Solution {
   /** Gets answer.
    *
    * @return the answer */
-  List<String> getAnswer();
+  Stream<String> getAnswer();
 
   /** Sets input from String.
    *

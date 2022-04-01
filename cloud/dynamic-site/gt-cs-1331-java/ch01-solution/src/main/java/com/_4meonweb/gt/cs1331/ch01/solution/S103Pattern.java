@@ -1,8 +1,6 @@
 package com._4meonweb.gt.cs1331.ch01.solution;
 
 import com._4meonweb.gt.cs1331.shell.api.AbstractSolution;
-import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /** Write a program that displays the pattern of word JAVA.
@@ -14,13 +12,12 @@ public class S103Pattern extends AbstractSolution {
   }
 
   @Override
-  public List<String> getAnswer() {
+  public Stream<String> getAnswer() {
     return Stream.of(
         "    J    A    V     V    A",
         "    J   A A    V   V    A A",
         "J   J  AAAAA    V V    AAAAA",
-        " J J  A     A    V    A     A")
-        .collect(Collectors.toUnmodifiableList());
+        " J J  A     A    V    A     A");
   }
 
 }

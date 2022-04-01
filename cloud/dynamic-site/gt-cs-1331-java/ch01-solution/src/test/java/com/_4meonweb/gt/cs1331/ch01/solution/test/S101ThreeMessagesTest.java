@@ -17,7 +17,7 @@ class S101ThreeMessagesTest {
 
   @Test
   void testAnswer() {
-    String[] lines = new S101ThreeMessages().getAnswer().toArray(new String[0]);
+    String[] lines = new S101ThreeMessages().getAnswer().toArray(String[]::new);
     String[] expd = { "Welcome to Java", "Welcome to Computer Science",
         "Programming is fun" };
     assertArrayEquals(expd, lines, "Lines");

@@ -1,7 +1,7 @@
 package com._4meonweb.gt.cs1331.shell.web;
 
 import com._4meonweb.gt.cs1331.shell.api.Solution;
-import java.util.List;
+import java.util.stream.Stream;
 
 public class SolutionViewer implements SolutionViews {
   private Solution sltn;
@@ -36,7 +36,7 @@ public class SolutionViewer implements SolutionViews {
   }
 
   @Override
-  public List<String> getAnswer() {
+  public Stream<String> getAnswer() {
     return sltn.getAnswer();
   }
 

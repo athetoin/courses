@@ -3,6 +3,7 @@ package com._4meonweb.gt.cs1331.shell.web;
 import com._4meonweb.gt.cs1331.shell.api.Solution;
 import jakarta.xml.bind.annotation.XmlElement;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public interface SolutionViews extends Solution {
 
@@ -55,7 +56,8 @@ public interface SolutionViews extends Solution {
 
       @Override
       public List<String> getOutput() {
-        return SolutionViews.this.getAnswer();
+        return SolutionViews.this.getAnswer()
+            .collect(Collectors.toUnmodifiableList());
       }
 
     };
