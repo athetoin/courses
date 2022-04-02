@@ -12,8 +12,8 @@ gretty {
 }
 
 dependencies{
-    implementation(project(":ch01-solution"))
-    implementation(project(":output-api"))
+    implementation("com._4meonweb.gt.cs1331.shell:solution-api:")
+    implementation("com._4meonweb.gt.cs1331:ch01-solution:")
 		implementation("org.glassfish.jersey.containers:jersey-container-servlet:3.0.4")
 		implementation("org.glassfish.jersey.inject:jersey-hk2:3.0.4")
   	implementation("org.glassfish.jersey.media:jersey-media-moxy:3.0.4")
@@ -21,4 +21,4 @@ dependencies{
   	implementation("org.jboss.weld.servlet:weld-servlet-core:4.0.3.Final")
 }
 
-description = "Static output"
+description = "Chapter 1 Web output"

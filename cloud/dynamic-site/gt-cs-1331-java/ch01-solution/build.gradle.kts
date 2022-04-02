@@ -1,5 +1,5 @@
 plugins {
-		java
+    java
     `java-library`
 }
 
@@ -8,8 +8,9 @@ repositories {
 }
 
 dependencies{
-    implementation(project(":output-api"))
-		testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
+    implementation("com._4meonweb.gt.cs1331.shell:solution-api:")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
 }
 
 description = "Solutions for Chapter 1"
+group = "com._4meonweb.gt.cs1331"
