@@ -8,6 +8,7 @@ import java.util.stream.Stream;
  * @author Maxim */
 public class S113Algebra extends AbstractSolution {
 
+  /** Creates Algebra. */
   public S113Algebra() {
     super("1.13", "Algebra");
   }

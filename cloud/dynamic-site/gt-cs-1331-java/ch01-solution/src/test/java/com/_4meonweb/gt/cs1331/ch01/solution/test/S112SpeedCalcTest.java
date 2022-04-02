@@ -18,8 +18,8 @@ class S112SpeedCalcTest {
   @Test
   void testSpeed() {
     assertEquals("8.947804",
-        new S112SpeedCalc().getAnswer().toArray(String[]::new)[0]
-            .split(" ")[0],
-        "Speed");
+          new S112SpeedCalc().getAnswer().toArray(String[]::new)[0]
+                .split(" ")[0],
+          "Speed");
   }
 }

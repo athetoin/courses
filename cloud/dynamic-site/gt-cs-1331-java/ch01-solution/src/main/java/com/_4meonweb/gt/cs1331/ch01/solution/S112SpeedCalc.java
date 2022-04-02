@@ -8,6 +8,7 @@ import java.util.stream.Stream;
  * @author Maxim */
 public class S112SpeedCalc extends AbstractSolution {
 
+  /** Creates Speed Calculator. */
   public S112SpeedCalc() {
     super("1.12", "Speed Calculator");
   }

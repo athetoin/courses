@@ -18,8 +18,8 @@ class S110AverageSpeedTest {
   @Test
   void testSpeed() {
     assertEquals("11.538462",
-        new S110AverageSpeed().getAnswer().toArray(String[]::new)[0]
-            .split(" ")[3],
-        "Speed");
+          new S110AverageSpeed().getAnswer().toArray(String[]::new)[0]
+                .split(" ")[3],
+          "Speed");
   }
 }

@@ -9,6 +9,7 @@ import java.util.stream.Stream;
  * @author Maxim */
 public class S111Projection extends AbstractSolution {
 
+  /** Creates Projection. */
   public S111Projection() {
     super("1.11", "Projection");
   }

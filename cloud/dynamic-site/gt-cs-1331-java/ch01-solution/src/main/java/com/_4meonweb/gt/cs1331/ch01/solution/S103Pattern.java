@@ -7,6 +7,8 @@ import java.util.stream.Stream;
  *
  * @author Maxim */
 public class S103Pattern extends AbstractSolution {
+
+  /** Create Pattern. */
   public S103Pattern() {
     super("1.3", "Pattern", true);
   }

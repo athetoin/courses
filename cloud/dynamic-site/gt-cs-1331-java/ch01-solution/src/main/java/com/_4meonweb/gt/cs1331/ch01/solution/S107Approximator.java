@@ -7,6 +7,8 @@ import java.util.stream.Stream;
  *
  * @author Maxim */
 public class S107Approximator extends AbstractSolution {
+
+  /** Create Approximator. */
   public S107Approximator() {
     super("1.7", "Approximate PI");
   }

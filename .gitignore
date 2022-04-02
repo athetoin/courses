@@ -11,6 +11,7 @@ build
 .settings
 .project
 .classpath
+.pmd
 bin
 
 # Ignore IDEA project-specific directory

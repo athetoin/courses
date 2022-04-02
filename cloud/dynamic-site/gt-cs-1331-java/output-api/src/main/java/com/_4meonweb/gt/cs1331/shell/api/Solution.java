@@ -11,13 +11,25 @@ public interface Solution {
    * @return the ID */
   String getId();
 
+  /** Gets solution title.
+   *
+   * @return the title */
   String getTitle();
 
+  /** Gets solution order in list.
+   *
+   * @return the order number */
   int getOrder();
 
+  /** Gets fill label in UI.
+   *
+   * @return the UI label */
   String getLabel();
 
-  boolean isPattern();
+  /** Gets flag for mono-width output.
+   *
+   * @return the mono-width output flag */
+  boolean getPatternFlag();
 
   /** Gets answer.
    *

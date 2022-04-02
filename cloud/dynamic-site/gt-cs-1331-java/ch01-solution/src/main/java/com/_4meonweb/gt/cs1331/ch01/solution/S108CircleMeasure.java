@@ -7,6 +7,8 @@ import java.util.stream.Stream;
  *
  * @author Maxim */
 public class S108CircleMeasure extends AbstractSolution {
+
+  /** Creates Circle measure. */
   public S108CircleMeasure() {
     super("1.8", "Circle measure");
   }

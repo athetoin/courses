@@ -8,6 +8,8 @@ import java.util.stream.Stream;
  *
  * @author Maxim */
 public class S109RectangleMeasure extends AbstractSolution {
+
+  /** Creates Rectangle measure. */
   public S109RectangleMeasure() {
     super("1.9", "Rectangle measure");
   }

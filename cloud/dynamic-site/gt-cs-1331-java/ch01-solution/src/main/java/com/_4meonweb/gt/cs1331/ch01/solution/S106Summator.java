@@ -10,7 +10,8 @@ import java.util.stream.Stream;
  *
  * @author Maxim */
 public class S106Summator extends AbstractSolution {
-  /** Create S106Summator. */
+
+  /** Create Summator. */
   public S106Summator() {
     super("1.6", "Summation series");
   }

@@ -5,6 +5,9 @@ import jakarta.ws.rs.core.Application;
 import java.util.HashSet;
 import java.util.Set;
 
+/** Set main service class.
+ *
+ * @author Maxim */
 @ApplicationPath("/solutions")
 public class SolutionApp extends Application {
   @Override

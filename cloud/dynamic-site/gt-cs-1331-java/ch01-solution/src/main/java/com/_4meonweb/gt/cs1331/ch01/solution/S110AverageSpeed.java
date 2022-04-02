@@ -7,6 +7,8 @@ import java.util.stream.Stream;
  *
  * @author Maxim */
 public class S110AverageSpeed extends AbstractSolution {
+
+  /** Creates Average speed. */
   public S110AverageSpeed() {
     super("1.10", "Average Speed");
   }

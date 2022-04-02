@@ -7,6 +7,8 @@ import java.util.stream.Stream;
  *
  * @author Maxim */
 public class S105Computator extends AbstractSolution {
+
+  /** Create Computator. */
   public S105Computator() {
     super("1.5", "Computator");
   }

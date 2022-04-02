@@ -9,6 +9,8 @@ import java.util.stream.Stream;
  *
  * @author Maxim */
 public class S104Table extends AbstractSolution {
+
+  /** Create Table. */
   public S104Table() {
     super("1.4", "Table", true);
   }

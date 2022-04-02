@@ -3,8 +3,13 @@ package com._4meonweb.gt.cs1331.shell.web;
 import com._4meonweb.gt.cs1331.shell.api.Solution;
 import java.util.stream.Stream;
 
+/** SolutionViewer implementation.
+ *
+ * @author Maxim */
 public class SolutionViewer implements SolutionViews {
-  private Solution sltn;
+
+  /** Solution. */
+  private final transient Solution sltn;
 
   SolutionViewer(Solution solution) {
     this.sltn = solution;
@@ -31,8 +36,8 @@ public class SolutionViewer implements SolutionViews {
   }
 
   @Override
-  public boolean isPattern() {
-    return sltn.isPattern();
+  public boolean getPatternFlag() {
+    return sltn.getPatternFlag();
   }
 
   @Override
