@@ -21,3 +21,7 @@ application {
         "-Djava.util.logging.config.class=com._4meonweb.gt.cs1331.shell.console.LogConfiguration"
     )
 }
+
+tasks.withType<JavaExec>() {
+    standardInput = System.`in`
+}
