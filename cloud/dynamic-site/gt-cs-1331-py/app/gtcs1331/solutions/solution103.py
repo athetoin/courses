@@ -1,6 +1,9 @@
-from solution_api.solution import Solution
+'''Solution 1.3 implementation'''
+
+from gtcs1331.solution_api.solution import Solution
 
 class Solution103(Solution):
+    '''Solution 1.3'''
     id = "1.3"
     title = "Pattern"
     is_pattern = True
@@ -10,3 +13,4 @@ class Solution103(Solution):
         "PPPP    Y     T   HHHHH O   O N N N",
         "P       Y     T   H   H  OOO  N  NN"
         ]
+        

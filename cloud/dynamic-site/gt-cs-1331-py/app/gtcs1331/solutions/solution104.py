@@ -1,6 +1,9 @@
-from solution_api.solution import Solution
+'''Solution 1.4 implementation'''
+
+from gtcs1331.solution_api.solution import Solution
 
 class Solution104(Solution):
+    '''Solution 1.4'''
     id = "1.4"
     title = "Table"
     is_pattern = True
