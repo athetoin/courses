@@ -1,4 +1,4 @@
-from solutions.solution import Solution
+from solution_api.solution import Solution
 
 class Solution101(Solution):
     id = "1.1"

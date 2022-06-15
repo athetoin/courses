@@ -1,14 +1,14 @@
-import solutions.solution101
+from solutions.solution101 import Solution101
 import unittest
 
 class TestSolution101(unittest.TestCase):
     def setUp(self):
-        self._sltn = solutions.solution101.Solution101()
+        self._sltn = Solution101()
 
     def test_answer(self):
         self.assertListEqual(
             self._sltn.answer,
-                ["Welcome to Java",
+                ["Welcome to Python",
                 "Welcome to Computer Science",
                 "Programming is fun"])
 

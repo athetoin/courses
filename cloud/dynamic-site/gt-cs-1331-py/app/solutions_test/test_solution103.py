@@ -1,9 +1,9 @@
-import solutions.solution102
+from solutions.solution103 import Solution103
 import unittest
 
 class TestSolution103(unittest.TestCase):
     def setUp(self):
-        self._sltn = solutions.solution103.Solution103()
+        self._sltn = Solution103()
 
     def test_answer(self):
         self.assertListEqual(

@@ -1,10 +1,7 @@
-from pickle import FALSE
-
-
 class Solution:
     id = None
     title = None
-    is_pattern = FALSE
+    is_pattern = False
 
     def __get_label(self):
         return "{id}: {title}".format(id=self.id, title=self.title)

@@ -1,6 +1,5 @@
-from conoutput.solutions import Solutions
+from solution_api.solutions import Solutions
 import importlib
-from solutions.solution import Solution
 
 def answer():
     print("\n-----------------------------")
@@ -18,21 +17,20 @@ def list_solution(slts:Solutions):
 def mainloop():
     sel = str(input("\n(R)erun, (S)elect solution, (Q)uit: "))
     match sel:
-        case "Q":
+        case "Q" | "q":
             return
-        case "S":
+        case "S" | "s":
             global sltn_sel
             sltn_sel = list_solution(slts)
             answer()
             mainloop()
-        case "R":
+        case "R" | "r":
             answer()
             mainloop()
         case _:
             mainloop()
 
-slts = Solutions()
-slts.module = importlib.import_module("solutions")
+slts = Solutions(importlib.import_module("solutions"))
 print("-----------------------------")
 print("GT CS 1331 Chapter 1 (Python)")
 print("-----------------------------")

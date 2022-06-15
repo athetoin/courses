@@ -1,8 +1,7 @@
 from collections import namedtuple
-from solutions.solution import Solution
 
 class Solutions:
-    def __set_module(self, module):
+    def __init__(self, module):
         names = filter(lambda name: name.startswith("Solution") and len(name) > 8, dir(module))
         slts = map(lambda nm: getattr(module, nm)(),names)
         self._solutions = list(slts)
@@ -15,5 +14,3 @@ class Solutions:
         response = namedtuple("Response","label is_pattern answer")
         sltn = next(filter(lambda sltn: sltn.id==id, self._solutions))
         return response(sltn.label, sltn.is_pattern, sltn.answer)
-
-    module = property(None, __set_module, None, "Set module with solutions")
