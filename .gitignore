@@ -22,3 +22,6 @@ bin
 
 # Ignore VS Code project-specific directory
 .vscode
+
+# Ignore Pythone folder
+__pycache__
