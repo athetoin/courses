@@ -25,6 +25,6 @@ bin
 
 # Ignore Pythone folder
 __pycache__
-TestResult
-.pyproj
-.sln
+TestResults
+*.pyproj
+*.sln
