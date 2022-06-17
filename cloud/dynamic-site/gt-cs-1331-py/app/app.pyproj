@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{aeab9850-ceca-4496-a36f-afde02bb2ab5}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>gtcs1331\console_ch1\con_solution.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <TestFramework>unittest</TestFramework>
+    <UnitTestPattern>test_*.py</UnitTestPattern>
+    <UnitTestRootDirectory>./gtcs1331/solutions_test</UnitTestRootDirectory>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="gtcs1331\console_ch1\con_solution.py" />
+    <Compile Include="gtcs1331\console_ch1\__init__.py" />
+    <Compile Include="gtcs1331\solutions\solution101.py" />
+    <Compile Include="gtcs1331\solutions\solution102.py" />
+    <Compile Include="gtcs1331\solutions\solution103.py" />
+    <Compile Include="gtcs1331\solutions\solution104.py" />
+    <Compile Include="gtcs1331\solutions\solution106.py" />
+    <Compile Include="gtcs1331\solutions\solution107.py" />
+    <Compile Include="gtcs1331\solutions\solution108.py" />
+    <Compile Include="gtcs1331\solutions\solution109.py" />
+    <Compile Include="gtcs1331\solutions\solution110.py" />
+    <Compile Include="gtcs1331\solutions\__init__.py" />
+    <Compile Include="gtcs1331\solutions_test\test_solution101.py" />
+    <Compile Include="gtcs1331\solutions_test\test_solution102.py" />
+    <Compile Include="gtcs1331\solutions_test\test_solution103.py" />
+    <Compile Include="gtcs1331\solutions_test\test_solution104.py" />
+    <Compile Include="gtcs1331\solutions_test\test_solution105.py" />
+    <Compile Include="gtcs1331\solutions_test\test_solution106.py" />
+    <Compile Include="gtcs1331\solutions_test\test_solution107.py" />
+    <Compile Include="gtcs1331\solutions_test\test_solution108.py" />
+    <Compile Include="gtcs1331\solutions_test\test_solution109.py" />
+    <Compile Include="gtcs1331\solutions_test\test_solution110.py" />
+    <Compile Include="gtcs1331\solutions_test\__init__.py" />
+    <Compile Include="gtcs1331\solution_api\solution.py" />
+    <Compile Include="gtcs1331\solution_api\solutions.py" />
+    <Compile Include="gtcs1331\solution_api\__init__.py" />
+    <Compile Include="gtcs1331\__init__.py" />
+    <Compile Include="setup.py" />
+    <Compile Include="gtcs1331\solutions\solution105.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gtcs1331.egg-info\dependency_links.txt" />
+    <Content Include="gtcs1331.egg-info\SOURCES.txt" />
+    <Content Include="gtcs1331.egg-info\top_level.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="gtcs1331" />
+    <Folder Include="gtcs1331.egg-info" />
+    <Folder Include="gtcs1331\console_ch1" />
+    <Folder Include="gtcs1331\solutions" />
+    <Folder Include="gtcs1331\solutions_test" />
+    <Folder Include="gtcs1331\solution_api" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
