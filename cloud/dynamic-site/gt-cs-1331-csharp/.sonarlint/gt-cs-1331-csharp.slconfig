@@ -1,0 +1,15 @@
+{
+  "ServerUri": "https://sonarcloud.io/",
+  "Organization": {
+    "Key": "athetoin",
+    "Name": "athetoin"
+  },
+  "ProjectKey": "athetoin_courses",
+  "ProjectName": "courses",
+  "Profiles": {
+    "CSharp": {
+      "ProfileKey": "AX7hAjhE8gklgpch0Rrg",
+      "ProfileTimestamp": "2022-03-31T10:15:41Z"
+    }
+  }
+}

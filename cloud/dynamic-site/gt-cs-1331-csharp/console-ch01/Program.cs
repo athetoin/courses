@@ -23,15 +23,16 @@ namespace _4MeOnWeb.ConsoleCh01 {
 
         static void Main(string[] args) {
             IHost? host = CreateHostBuilder(args).Build();
-            host.RunAsync();
+            _ = host.RunAsync();
 
             slts = host.Services.CreateScope().ServiceProvider.GetRequiredService<SolutionList>();
 
             Console.WriteLine("-----------------------------");
             Console.WriteLine("GT CS 1331 Chapter 1 (C#)");
             Console.WriteLine("-----------------------------");
-            selSltn = ListSolutions(slts);
-            Answer();
+            if ((selSltn = ListSolutions(slts)) != null) {
+                Answer();
+            }
             RunUILoop();
         }
 
@@ -44,10 +45,10 @@ namespace _4MeOnWeb.ConsoleCh01 {
             }
         }
 
-        static ISolution ListSolutions(SolutionList slts) {
+        static ISolution? ListSolutions(SolutionList slts) {
             Console.WriteLine("Solutions");
             foreach (string label in slts.List.Select(item => item.Label)) {
-                Console.WriteLine(label);
+                Console.WriteLine($"\t{label}");
             }
             Console.WriteLine("-----------------------------");
             Console.Write("Choose a solution: ");
@@ -64,13 +65,16 @@ namespace _4MeOnWeb.ConsoleCh01 {
                     return;
                 case "S":
                 case "s":
-                    selSltn = ListSolutions(slts!);
-                    Answer();
+                    if ((selSltn = ListSolutions(slts!)) != null) {
+                        Answer();
+                    }
                     RunUILoop();
                     break;
                 case "R":
                 case "r":
-                    Answer();
+                    if (selSltn != null) {
+                        Answer();
+                    }
                     RunUILoop();
                     break;
                 default:

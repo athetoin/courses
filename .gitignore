@@ -19,13 +19,14 @@ bin
 
 # Ignore VS project-specific directory
 .vs
+TestResults
+bin
+obj
 
 # Ignore VS Code project-specific directory
 .vscode
 
 # Ignore Pythone folder
 __pycache__
-TestResults
-*.pyproj
-*.sln
 *.egg-info
+build

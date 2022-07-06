@@ -10,8 +10,8 @@ namespace _4MeOnWeb.SolutionAPI {
 
         public IEnumerable<ISolutionItem> List => _solutions.Select(sltn => sltn.Item);
 
-        public ISolution GetSolution(string? sltn_id) {
-            return _solutions.First(sltn => sltn.Id == sltn_id);
+        public ISolution? GetSolution(string? sltn_id) {
+            return _solutions.FirstOrDefault(sltn => sltn!.Id == sltn_id, null);
         }
     }
 }
