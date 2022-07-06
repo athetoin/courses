@@ -13,7 +13,7 @@ class Solution111(Solution):
         born_year = sec_year / 7
         death_year = sec_year / 13
         immgr_year = sec_year / 45
-        dlt_year = born_year - death_year + immgr_year
+        dlt_year = round(born_year - death_year + immgr_year,0)
 
         return list(map(lambda year:
         f"In {int(crnt_year + year):d} population is {int(crnt_ppln + dlt_year * year):d}",
