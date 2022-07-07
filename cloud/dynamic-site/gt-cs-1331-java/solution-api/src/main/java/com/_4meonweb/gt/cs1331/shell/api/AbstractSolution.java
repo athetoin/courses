@@ -1,5 +1,8 @@
 package com._4meonweb.gt.cs1331.shell.api;
 
+import java.util.Map.Entry;
+import java.util.stream.Stream;
+
 /** Common implementation for Solution.
  *
  * @author Maxim */
@@ -47,9 +50,73 @@ public abstract class AbstractSolution implements Solution {
   }
 
   @Override
+  public SolutionItem getItem() {
+    return new SolutionItemUse(this);
+  }
+
+  class SolutionItemUse implements SolutionItem {
+    private Solution parent;
+
+    public SolutionItemUse(Solution parent) {
+      this.parent = parent;
+    }
+
+    @Override
+    public String getId() {
+      return parent.getId();
+    }
+
+    @Override
+    public int getOrder() {
+      return parent.getOrder();
+    }
+
+    @Override
+    public String getLabel() {
+      return parent.getLabel();
+    }
+
+  }
+
+  @Override
+  public SolutionAnswer getOutputAnswer() {
+    return new SolutionAnswerUse(this);
+  }
+
+  class SolutionAnswerUse implements SolutionAnswer {
+
+    private Solution parent;
+
+    public SolutionAnswerUse(Solution parent) {
+      this.parent = parent;
+    }
+
+    @Override
+    public String getLabel() {
+      return this.parent.getLabel();
+    }
+
+    @Override
+    public boolean isPattern() {
+      return this.parent.getPatternFlag();
+    }
+
+    @Override
+    public Stream<String> getAnswers() {
+      return this.parent.getAnswer();
+    }
+
+    @Override
+    public Stream<Entry<String, String>> getInputLabels() {
+      return this.parent.getInputLabel();
+    }
+
+  }
+
+  @Override
   public String getLabel() {
     if (this.label == null) {
-      this.label = String.format("%s: %s", this.id, this.title);
+      this.label = this.id + ": " + this.title;
     }
     return label;
   }

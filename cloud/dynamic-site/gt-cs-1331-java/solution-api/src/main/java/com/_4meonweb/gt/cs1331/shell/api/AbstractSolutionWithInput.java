@@ -1,6 +1,8 @@
 package com._4meonweb.gt.cs1331.shell.api;
 
 import java.io.ByteArrayInputStream;
+import java.util.Map;
+import java.util.Optional;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
@@ -13,7 +15,7 @@ public abstract class AbstractSolutionWithInput extends AbstractSolution {
   }
 
   /** Input Scanners. */
-  private transient Scanner[] input;
+  private transient Scanner[] input = new Scanner[0];
 
   @Override
   public void setInput(Stream<String> input) {
@@ -24,13 +26,14 @@ public abstract class AbstractSolutionWithInput extends AbstractSolution {
 
   /** Input stream label is required for this type of solution. */
   @Override
-  public abstract Stream<String> getInputLabel();
+  public abstract Stream<Map.Entry<String, String>> getInputLabel();
 
   /** Gets input scanner.
    *
    * @param index the Scanner index
    * @return the Scanner */
-  protected Scanner getInput(int index) {
-    return input[index];
+  protected Optional<Scanner> getInput(int index) {
+    return Optional.of(index).filter(i -> i >= 0 && i < input.length).stream()
+          .map(i -> input[i]).findAny();
   }
 }

@@ -1,5 +1,6 @@
 package com._4meonweb.gt.cs1331.shell.api;
 
+import java.util.Map;
 import java.util.stream.Stream;
 
 /** Exercise solution for publication.
@@ -46,7 +47,35 @@ public interface Solution {
   /** Gets labels for identifying input.
    *
    * @return the input stream label */
-  default Stream<String> getInputLabel() {
+  default Stream<Map.Entry<String, String>> getInputLabel() {
     return Stream.empty();
   }
+
+  /** Solution item in selection list.
+   *
+   * @author Maxim */
+  public interface SolutionItem {
+    String getId();
+
+    int getOrder();
+
+    String getLabel();
+  }
+
+  SolutionItem getItem();
+
+  /** Solution answer for client.
+   *
+   * @author Maxim */
+  public interface SolutionAnswer {
+    String getLabel();
+
+    boolean isPattern();
+
+    Stream<String> getAnswers();
+
+    Stream<Map.Entry<String, String>> getInputLabels();
+  }
+
+  SolutionAnswer getOutputAnswer();
 }
