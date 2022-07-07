@@ -6,7 +6,7 @@ describe("Solution 1.1", function () {
     it("should return 3 predefined lines", function () {
       var solution = new sltn();
       expect(solution.answer()).is.deep.equal([
-        "Welcome to Java",
+        "Welcome to JavaScript",
         "Welcome to Computer Science",
         "Programming is fun",
       ]);

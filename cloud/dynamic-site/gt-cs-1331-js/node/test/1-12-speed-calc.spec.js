@@ -5,7 +5,9 @@ describe("Solution 1.12", function () {
   describe("#answer()", function () {
     it("should return 8.947804", function () {
       var solution = new sltn();
-      expect("8.947804").is.equal(solution.answer()[0].split(" ")[0]);
+      expect(solution.answer()).is.deep.equal([
+        "8.947804 kilometers per hour"
+      ]);
     });
   });
 });

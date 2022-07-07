@@ -5,8 +5,9 @@ describe("Solution 1.6", function () {
   describe("#answer()", function () {
     it("should return answer with 45 in sum", function () {
       var solution = new sltn();
-      var line = solution.answer()[0];
-      expect(line.substring(line.length - 2)).is.equal("45");
+      expect(solution.answer()).is.deep.equal([
+        "1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 45"
+      ]);
     });
   });
 });

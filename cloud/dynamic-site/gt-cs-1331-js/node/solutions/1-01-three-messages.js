@@ -5,7 +5,7 @@ class Solution101 extends Solution {
   title = "Display three messages";
   answer() {
     return [
-      "Welcome to Java",
+      "Welcome to JavaScript",
       "Welcome to Computer Science",
       "Programming is fun",
     ];
