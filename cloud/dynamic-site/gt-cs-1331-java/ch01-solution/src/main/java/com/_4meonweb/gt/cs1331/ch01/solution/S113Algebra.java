@@ -24,6 +24,7 @@ public class S113Algebra extends AbstractSolution {
     var x = (e * d - b * f) / (a * d - b * c);
     var y = (a * f - e * c) / (a * d - b * c);
     return Stream.of(
-        "x = " + String.format("%f", x), "y = " + String.format("%f", y));
+          "x = " + String.format("%f", x).replaceFirst("(?!^)0+$", ""),
+          "y = " + String.format("%f", y).replaceFirst("(?!^)0+$", ""));
   }
 }

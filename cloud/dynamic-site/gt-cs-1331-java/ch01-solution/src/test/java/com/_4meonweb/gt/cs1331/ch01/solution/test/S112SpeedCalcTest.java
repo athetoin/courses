@@ -1,5 +1,6 @@
 package com._4meonweb.gt.cs1331.ch01.solution.test;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com._4meonweb.gt.cs1331.ch01.solution.S112SpeedCalc;
@@ -16,10 +17,12 @@ class S112SpeedCalcTest {
   }
 
   @Test
-  void testSpeed() {
-    assertEquals("8.947804",
-          new S112SpeedCalc().getAnswer().toArray(String[]::new)[0]
-                .split(" ")[0],
-          "Speed");
+  void testAnswer() {
+    final var rslt = new S112SpeedCalc().getAnswer()
+          .toArray(String[]::new);
+    final String[] expd = {
+        "8.947804 kilometers per hour"
+    };
+    assertArrayEquals(expd, rslt, "Output");
   }
 }

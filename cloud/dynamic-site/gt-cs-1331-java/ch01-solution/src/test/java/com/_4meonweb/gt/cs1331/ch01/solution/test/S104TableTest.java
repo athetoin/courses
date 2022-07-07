@@ -1,10 +1,9 @@
 package com._4meonweb.gt.cs1331.ch01.solution.test;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com._4meonweb.gt.cs1331.ch01.solution.S104Table;
-import java.util.Arrays;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -24,7 +23,7 @@ class S104TableTest {
 
   @BeforeEach
   void parseAnswer() {
-    tbl = Arrays.stream(new S104Table().getAnswer().toArray(String[]::new));
+    tbl = new S104Table().getAnswer();
   }
 
   @Test
@@ -33,10 +32,14 @@ class S104TableTest {
   }
 
   @Test
-  void testColumns() {
-    assertEquals(3, tbl
-        .map(ln -> ln.split("\\s+").length)
-        .collect(Collectors.averagingDouble(Integer::doubleValue)),
-        "3 columns");
+  void testAnswer() {
+    String[] expd = {
+        "a\ta^2\ta^3",
+        "1\t1\t1",
+        "2\t4\t8",
+        "3\t9\t27",
+        "4\t16\t64"
+    };
+    assertArrayEquals(expd, tbl.toArray(String[]::new), "Lines");
   }
 }

@@ -16,16 +16,18 @@ public class S111Projection extends AbstractSolution {
 
   @Override
   public Stream<String> getAnswer() {
-    var crntPpln = 312032486;
-    var crntYear = 2021;
-    var secYear = 365 * 24 * 60 * 60;
-    var bornYear = secYear / 7;
-    var deathYear = secYear / 13;
-    var immgrYear = secYear / 45;
-    var dltYear = bornYear - deathYear + immgrYear;
+    long crntPpln = 312032486;
+    int crntYear = 2021;
+    double secYear = 365 * 24 * 60 * 60;
+    double bornYear = secYear / 7;
+    double deathYear = secYear / 13;
+    double immgrYear = secYear / 45;
+    long dltYear = Math.round(bornYear - deathYear + immgrYear);
 
-    return IntStream.rangeClosed(0, 5)
-        .mapToObj(i -> String.format("%s%d%s%,d", "In ", crntYear + i,
-            " population is ", crntPpln + dltYear * i));
+    return IntStream.rangeClosed(1, 5)
+          .mapToObj(i -> String.format(
+                "In %d population is %d",
+                crntYear + i,
+                crntPpln + dltYear * i));
   }
 }

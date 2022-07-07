@@ -1,5 +1,6 @@
 package com._4meonweb.gt.cs1331.ch01.solution.test;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com._4meonweb.gt.cs1331.ch01.solution.S105Computator;
@@ -17,8 +18,9 @@ class S105ComputatorTest {
 
   @Test
   void testAnswer() {
-    assertEquals("0.839286",
-        new S105Computator().getAnswer().toArray(String[]::new)[0],
-        "Result");
+    assertArrayEquals(
+          new String[] { "0.839286" },
+          new S105Computator().getAnswer().toArray(String[]::new),
+          "Result");
   }
 }

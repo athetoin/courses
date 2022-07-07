@@ -1,5 +1,6 @@
 package com._4meonweb.gt.cs1331.ch01.solution.test;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com._4meonweb.gt.cs1331.ch01.solution.S106Summator;
@@ -17,7 +18,8 @@ class S106SummatorTest {
 
   @Test
   void testAnswer() {
-    final var rslt = new S106Summator().getAnswer().toArray(String[]::new)[0];
-    assertEquals("45", rslt.substring(rslt.length() - 2), "Sum");
+    final var rslt = new S106Summator().getAnswer().toArray(String[]::new);
+    final String[] expd = { "1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 45" };
+    assertArrayEquals(expd, rslt, "Sum");
   }
 }
