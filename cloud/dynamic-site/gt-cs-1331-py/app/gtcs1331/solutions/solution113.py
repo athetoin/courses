@@ -17,7 +17,7 @@ class Solution113(Solution):
         y_elmt = (a_elmt * f_elmt - e_elmt * c_elmt) / (a_elmt * d_elmt - b_elmt * c_elmt)
 
         return [
-            f"x = {x_elmt:.6f}",
-            f"y = {y_elmt:.6f}"]
+            f"x = {x_elmt:.6f}".rstrip('0').rstrip('.'),
+            f"y = {y_elmt:.6f}".rstrip('0').rstrip('.')]
 
     answer = property(__answer)

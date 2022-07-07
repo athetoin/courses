@@ -17,6 +17,6 @@ class Solution111(Solution):
 
         return list(map(lambda year:
         f"In {int(crnt_year + year):d} population is {int(crnt_ppln + dlt_year * year):d}",
-            list(range(1,7))))
+            list(range(1,6))))
 
     answer = property(__answer)

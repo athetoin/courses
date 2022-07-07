@@ -3,7 +3,7 @@
 import unittest
 from gtcs1331.solutions.solution113 import Solution113
 
-class TestSolution110(unittest.TestCase):
+class TestSolution113(unittest.TestCase):
     '''Solution 1.13 test'''
     def setUp(self):
         self._sltn = Solution113()
@@ -13,7 +13,7 @@ class TestSolution110(unittest.TestCase):
         self.assertListEqual(
             self._sltn.answer, [
                 "x = 2.623901",
-                "y = 0.708740"],
+                "y = 0.70874"],
             'should return 2.623901 and 0.708740'
         )
 

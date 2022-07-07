@@ -3,7 +3,7 @@
 import unittest
 from gtcs1331.solutions.solution109 import Solution109
 
-class TestSolution106(unittest.TestCase):
+class TestSolution109(unittest.TestCase):
     '''Solution 1.9 test'''
     def setUp(self):
         self._sltn = Solution109()

@@ -11,13 +11,13 @@ class TestSolution111(unittest.TestCase):
     def test_answer(self):
         '''Answer test'''
         self.assertListEqual(
-            self._sltn.answer,
-            ["In 2022 population is 314812583",
+            self._sltn.answer, [
+                "In 2022 population is 314812583",
                 "In 2023 population is 317592680",
                 "In 2024 population is 320372777",
                 "In 2025 population is 323152874",
                 "In 2026 population is 325932971",
-                "In 2027 population is 328713068"],
+            ],
             'Answer should return exact numbers'
         )
 
