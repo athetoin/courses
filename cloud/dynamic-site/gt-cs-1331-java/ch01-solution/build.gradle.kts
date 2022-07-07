@@ -1,5 +1,5 @@
 plugins {
-    java
+    id("use")
     `java-library`
 }
 
@@ -8,7 +8,6 @@ repositories {
 }
 
 dependencies{
-    implementation("com._4meonweb.gt.cs1331.shell:solution-api:")
     testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
 }
 
